@@ -1,0 +1,21 @@
+{
+  "note": "each command was run by tools/capture_cli.py, exit codes as returned",
+  "runs": [
+    {
+      "command": "ab-readout --n-users 3000 --lift 0.08 --seed 4",
+      "exit_code": 4
+    },
+    {
+      "command": "ab-readout --n-users 3000 --icc 0.0 --seed 4",
+      "exit_code": 0
+    },
+    {
+      "command": "ab-readout --n-users 4000 --delivered-treatment-share 0.42",
+      "exit_code": 5
+    },
+    {
+      "command": "ab-readout --base-rate 0.9 --lift 0.5",
+      "exit_code": 2
+    }
+  ]
+}

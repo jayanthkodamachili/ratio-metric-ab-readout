@@ -1,0 +1,55 @@
+{
+  "experiment": "e1_false_positive_rate",
+  "question": "How often does each estimator call an effect in an A/A test?",
+  "scenario": {
+    "n_users": 4000,
+    "mean_events": 8.0,
+    "icc": 0.15,
+    "base_rate": 0.1,
+    "lift": 0.0,
+    "treatment_share": 0.5,
+    "delivered_treatment_share": null,
+    "alpha": 0.05,
+    "bootstrap_resamples": 400,
+    "seed": 100000
+  },
+  "replicates": 2000,
+  "result": {
+    "replicates": 2000,
+    "alpha": 0.05,
+    "rejection_rate": {
+      "naive_event": 0.191,
+      "delta_method": 0.053,
+      "cluster_bootstrap": 0.057
+    },
+    "mean_standard_error": {
+      "naive_event": 0.00335282,
+      "delta_method": 0.00494703,
+      "cluster_bootstrap": 0.0049388
+    },
+    "mean_se_ratio": 1.47548
+  },
+  "wilson_intervals": {
+    "naive_event": {
+      "low": 0.17437,
+      "high": 0.20881
+    },
+    "delta_method": {
+      "low": 0.04401,
+      "high": 0.0637
+    },
+    "cluster_bootstrap": {
+      "low": 0.04766,
+      "high": 0.06804
+    }
+  },
+  "headline": {
+    "nominal_alpha": 0.05,
+    "naive_fpr": 0.191,
+    "delta_fpr": 0.053,
+    "bootstrap_fpr": 0.057,
+    "naive_inflation": 3.82,
+    "se_ratio": 1.4754845030405261,
+    "design_effect_sqrt": 1.4317821063276353
+  }
+}

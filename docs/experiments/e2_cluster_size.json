@@ -1,0 +1,55 @@
+{
+  "experiment": "e2_cluster_size",
+  "question": "How does the naive error grow with events per user?",
+  "replicates": 600,
+  "icc": 0.15,
+  "cells": [
+    {
+      "mean_events": 1.0,
+      "naive_fpr": 0.04666666666666667,
+      "delta_fpr": 0.04666666666666667,
+      "se_ratio": 1.0002502088354848,
+      "design_effect_sqrt": 1.0
+    },
+    {
+      "mean_events": 2.0,
+      "naive_fpr": 0.08,
+      "delta_fpr": 0.045,
+      "se_ratio": 1.1074998525337605,
+      "design_effect_sqrt": 1.0723805294763609
+    },
+    {
+      "mean_events": 4.0,
+      "naive_fpr": 0.085,
+      "delta_fpr": 0.04,
+      "se_ratio": 1.2491171780584618,
+      "design_effect_sqrt": 1.2041594578792296
+    },
+    {
+      "mean_events": 8.0,
+      "naive_fpr": 0.195,
+      "delta_fpr": 0.03333333333333333,
+      "se_ratio": 1.4771295503522062,
+      "design_effect_sqrt": 1.4317821063276353
+    },
+    {
+      "mean_events": 16.0,
+      "naive_fpr": 0.30666666666666664,
+      "delta_fpr": 0.05,
+      "se_ratio": 1.8418079140851573,
+      "design_effect_sqrt": 1.8027756377319946
+    },
+    {
+      "mean_events": 32.0,
+      "naive_fpr": 0.3883333333333333,
+      "delta_fpr": 0.045,
+      "se_ratio": 2.4061912102356744,
+      "design_effect_sqrt": 2.3769728648009423
+    }
+  ],
+  "single_event_naive_fpr": 0.04666666666666667,
+  "single_event_se_ratio": 1.0002502088354848,
+  "largest_cluster_naive_fpr": 0.3883333333333333,
+  "largest_mean_events": 32.0,
+  "max_theory_gap": 0.045347444024570915
+}

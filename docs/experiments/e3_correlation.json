@@ -1,0 +1,55 @@
+{
+  "experiment": "e3_correlation",
+  "question": "At what correlation does the naive test stop being correct?",
+  "replicates": 600,
+  "mean_events": 8.0,
+  "cells": [
+    {
+      "icc": 0.0,
+      "naive_fpr": 0.035,
+      "delta_fpr": 0.03333333333333333,
+      "se_ratio": 0.999581575541304,
+      "design_effect_sqrt": 1.0
+    },
+    {
+      "icc": 0.02,
+      "naive_fpr": 0.07,
+      "delta_fpr": 0.055,
+      "se_ratio": 1.076610033823303,
+      "design_effect_sqrt": 1.0677078252031311
+    },
+    {
+      "icc": 0.05,
+      "naive_fpr": 0.10166666666666667,
+      "delta_fpr": 0.056666666666666664,
+      "se_ratio": 1.1804291645289275,
+      "design_effect_sqrt": 1.161895003862225
+    },
+    {
+      "icc": 0.1,
+      "naive_fpr": 0.13,
+      "delta_fpr": 0.043333333333333335,
+      "se_ratio": 1.3356971916193672,
+      "design_effect_sqrt": 1.3038404810405297
+    },
+    {
+      "icc": 0.2,
+      "naive_fpr": 0.23166666666666666,
+      "delta_fpr": 0.051666666666666666,
+      "se_ratio": 1.6032186095356225,
+      "design_effect_sqrt": 1.5491933384829668
+    },
+    {
+      "icc": 0.4,
+      "naive_fpr": 0.31666666666666665,
+      "delta_fpr": 0.045,
+      "se_ratio": 2.03424149942124,
+      "design_effect_sqrt": 1.949358868961793
+    }
+  ],
+  "zero_icc_naive_fpr": 0.035,
+  "zero_icc_se_ratio": 0.999581575541304,
+  "worst_icc": 0.4,
+  "worst_naive_fpr": 0.31666666666666665,
+  "max_theory_gap": 0.08488263045944722
+}

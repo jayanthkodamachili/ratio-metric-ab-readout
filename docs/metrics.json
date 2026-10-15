@@ -1,0 +1,422 @@
+{
+  "metrics": {
+    "tests_total": 103,
+    "coverage_line_pct": 100.0,
+    "replicates_e1": 2000,
+    "naive_fpr": 0.191,
+    "delta_fpr": 0.053,
+    "bootstrap_fpr": 0.057,
+    "naive_inflation": 3.8,
+    "se_ratio": 1.475,
+    "design_effect_sqrt": 1.432,
+    "single_event_fpr": 0.047,
+    "largest_cluster_fpr": 0.388,
+    "zero_icc_fpr": 0.035,
+    "zero_icc_se_ratio": 1.0,
+    "worst_icc_fpr": 0.317,
+    "max_theory_gap": 0.085,
+    "naive_power_at_largest": 0.858,
+    "delta_power_at_largest": 0.664,
+    "power_gap_at_largest": 0.194,
+    "e4_largest_n": 16000,
+    "srm_users_declared": 50,
+    "e2_1_naive": 0.047,
+    "e2_1_delta": 0.047,
+    "e2_1_ratio": 1.0,
+    "e2_1_predicted": 1.0,
+    "e2_2_naive": 0.08,
+    "e2_2_delta": 0.045,
+    "e2_2_ratio": 1.107,
+    "e2_2_predicted": 1.072,
+    "e2_4_naive": 0.085,
+    "e2_4_delta": 0.04,
+    "e2_4_ratio": 1.249,
+    "e2_4_predicted": 1.204,
+    "e2_8_naive": 0.195,
+    "e2_8_delta": 0.033,
+    "e2_8_ratio": 1.477,
+    "e2_8_predicted": 1.432,
+    "e2_16_naive": 0.307,
+    "e2_16_delta": 0.05,
+    "e2_16_ratio": 1.842,
+    "e2_16_predicted": 1.803,
+    "e2_32_naive": 0.388,
+    "e2_32_delta": 0.045,
+    "e2_32_ratio": 2.406,
+    "e2_32_predicted": 2.377,
+    "e3_000_icc": 0.0,
+    "e3_000_naive": 0.035,
+    "e3_000_ratio": 1.0,
+    "e3_000_predicted": 1.0,
+    "e3_002_icc": 0.02,
+    "e3_002_naive": 0.07,
+    "e3_002_ratio": 1.077,
+    "e3_002_predicted": 1.068,
+    "e3_005_icc": 0.05,
+    "e3_005_naive": 0.102,
+    "e3_005_ratio": 1.18,
+    "e3_005_predicted": 1.162,
+    "e3_010_icc": 0.1,
+    "e3_010_naive": 0.13,
+    "e3_010_ratio": 1.336,
+    "e3_010_predicted": 1.304,
+    "e3_020_icc": 0.2,
+    "e3_020_naive": 0.232,
+    "e3_020_ratio": 1.603,
+    "e3_020_predicted": 1.549,
+    "e3_040_icc": 0.4,
+    "e3_040_naive": 0.317,
+    "e3_040_ratio": 2.034,
+    "e3_040_predicted": 1.949,
+    "e4_1000_naive_power": 0.244,
+    "e4_1000_delta_power": 0.072,
+    "e4_2000_naive_power": 0.336,
+    "e4_2000_delta_power": 0.14,
+    "e4_4000_naive_power": 0.426,
+    "e4_4000_delta_power": 0.208,
+    "e4_8000_naive_power": 0.608,
+    "e4_8000_delta_power": 0.38,
+    "e4_16000_naive_power": 0.858,
+    "e4_16000_delta_power": 0.664
+  },
+  "display": {
+    "tests_total": "103",
+    "coverage_line_pct": "100",
+    "replicates_e1": "2000",
+    "naive_fpr": "0.191",
+    "delta_fpr": "0.053",
+    "bootstrap_fpr": "0.057",
+    "naive_inflation": "3.8",
+    "se_ratio": "1.475",
+    "design_effect_sqrt": "1.432",
+    "single_event_fpr": "0.047",
+    "largest_cluster_fpr": "0.388",
+    "zero_icc_fpr": "0.035",
+    "zero_icc_se_ratio": "1.000",
+    "worst_icc_fpr": "0.317",
+    "max_theory_gap": "0.085",
+    "naive_power_at_largest": "0.858",
+    "delta_power_at_largest": "0.664",
+    "power_gap_at_largest": "0.194",
+    "e4_largest_n": "16000",
+    "srm_users_declared": "50",
+    "e2_1_naive": "0.047",
+    "e2_1_delta": "0.047",
+    "e2_1_ratio": "1.000",
+    "e2_1_predicted": "1.000",
+    "e2_2_naive": "0.080",
+    "e2_2_delta": "0.045",
+    "e2_2_ratio": "1.107",
+    "e2_2_predicted": "1.072",
+    "e2_4_naive": "0.085",
+    "e2_4_delta": "0.040",
+    "e2_4_ratio": "1.249",
+    "e2_4_predicted": "1.204",
+    "e2_8_naive": "0.195",
+    "e2_8_delta": "0.033",
+    "e2_8_ratio": "1.477",
+    "e2_8_predicted": "1.432",
+    "e2_16_naive": "0.307",
+    "e2_16_delta": "0.050",
+    "e2_16_ratio": "1.842",
+    "e2_16_predicted": "1.803",
+    "e2_32_naive": "0.388",
+    "e2_32_delta": "0.045",
+    "e2_32_ratio": "2.406",
+    "e2_32_predicted": "2.377",
+    "e3_000_icc": "0.00",
+    "e3_000_naive": "0.035",
+    "e3_000_ratio": "1.000",
+    "e3_000_predicted": "1.000",
+    "e3_002_icc": "0.02",
+    "e3_002_naive": "0.070",
+    "e3_002_ratio": "1.077",
+    "e3_002_predicted": "1.068",
+    "e3_005_icc": "0.05",
+    "e3_005_naive": "0.102",
+    "e3_005_ratio": "1.180",
+    "e3_005_predicted": "1.162",
+    "e3_010_icc": "0.10",
+    "e3_010_naive": "0.130",
+    "e3_010_ratio": "1.336",
+    "e3_010_predicted": "1.304",
+    "e3_020_icc": "0.20",
+    "e3_020_naive": "0.232",
+    "e3_020_ratio": "1.603",
+    "e3_020_predicted": "1.549",
+    "e3_040_icc": "0.40",
+    "e3_040_naive": "0.317",
+    "e3_040_ratio": "2.034",
+    "e3_040_predicted": "1.949",
+    "e4_1000_naive_power": "0.244",
+    "e4_1000_delta_power": "0.072",
+    "e4_2000_naive_power": "0.336",
+    "e4_2000_delta_power": "0.140",
+    "e4_4000_naive_power": "0.426",
+    "e4_4000_delta_power": "0.208",
+    "e4_8000_naive_power": "0.608",
+    "e4_8000_delta_power": "0.380",
+    "e4_16000_naive_power": "0.858",
+    "e4_16000_delta_power": "0.664"
+  },
+  "anchors": {
+    "tests_total": [
+      "{} tests"
+    ],
+    "coverage_line_pct": [
+      "{} percent line coverage",
+      "{}% line coverage"
+    ],
+    "replicates_e1": [
+      "{} A/A replicates",
+      "over {} replicates"
+    ],
+    "naive_fpr": [
+      "claims an effect in {}",
+      "{} of them"
+    ],
+    "delta_fpr": [
+      "delta method sits at {}",
+      "delta method at {}"
+    ],
+    "bootstrap_fpr": [
+      "bootstrap at {}",
+      "{} for the bootstrap"
+    ],
+    "naive_inflation": [
+      "{} times the rate",
+      "{} times"
+    ],
+    "se_ratio": [
+      "{} times larger",
+      "ratio of {}"
+    ],
+    "design_effect_sqrt": [
+      "theory predicts {}",
+      "predicts {}"
+    ],
+    "single_event_fpr": [
+      "{} at one event",
+      "one event per user it is {}"
+    ],
+    "largest_cluster_fpr": [
+      "rises to {}",
+      "{} at 32"
+    ],
+    "zero_icc_fpr": [
+      "{} when the correlation is zero",
+      "falls to {}"
+    ],
+    "zero_icc_se_ratio": [
+      "ratio of exactly {}",
+      "exactly {}"
+    ],
+    "worst_icc_fpr": [
+      "{} at a correlation",
+      "reaches {}"
+    ],
+    "max_theory_gap": [
+      "within {} of",
+      "no more than {}"
+    ],
+    "naive_power_at_largest": [
+      "appears to reach {}",
+      "{} power"
+    ],
+    "delta_power_at_largest": [
+      "real power is {}",
+      "actually {}"
+    ],
+    "power_gap_at_largest": [
+      "{} points of power",
+      "gap of {}"
+    ],
+    "e4_largest_n": [
+      "{} users",
+      "at {}"
+    ],
+    "srm_users_declared": [
+      "declared {} percent",
+      "{} percent split"
+    ],
+    "e2_1_naive": [
+      "| {} |"
+    ],
+    "e2_1_delta": [
+      "| {} |"
+    ],
+    "e2_1_ratio": [
+      "| {} |"
+    ],
+    "e2_1_predicted": [
+      "| {} |"
+    ],
+    "e2_2_naive": [
+      "| {} |"
+    ],
+    "e2_2_delta": [
+      "| {} |"
+    ],
+    "e2_2_ratio": [
+      "| {} |"
+    ],
+    "e2_2_predicted": [
+      "| {} |"
+    ],
+    "e2_4_naive": [
+      "| {} |"
+    ],
+    "e2_4_delta": [
+      "| {} |"
+    ],
+    "e2_4_ratio": [
+      "| {} |"
+    ],
+    "e2_4_predicted": [
+      "| {} |"
+    ],
+    "e2_8_naive": [
+      "| {} |"
+    ],
+    "e2_8_delta": [
+      "| {} |"
+    ],
+    "e2_8_ratio": [
+      "| {} |"
+    ],
+    "e2_8_predicted": [
+      "| {} |"
+    ],
+    "e2_16_naive": [
+      "| {} |"
+    ],
+    "e2_16_delta": [
+      "| {} |"
+    ],
+    "e2_16_ratio": [
+      "| {} |"
+    ],
+    "e2_16_predicted": [
+      "| {} |"
+    ],
+    "e2_32_naive": [
+      "| {} |"
+    ],
+    "e2_32_delta": [
+      "| {} |"
+    ],
+    "e2_32_ratio": [
+      "| {} |"
+    ],
+    "e2_32_predicted": [
+      "| {} |"
+    ],
+    "e3_000_icc": [
+      "| {} |"
+    ],
+    "e3_000_naive": [
+      "| {} |"
+    ],
+    "e3_000_ratio": [
+      "| {} |"
+    ],
+    "e3_000_predicted": [
+      "| {} |"
+    ],
+    "e3_002_icc": [
+      "| {} |"
+    ],
+    "e3_002_naive": [
+      "| {} |"
+    ],
+    "e3_002_ratio": [
+      "| {} |"
+    ],
+    "e3_002_predicted": [
+      "| {} |"
+    ],
+    "e3_005_icc": [
+      "| {} |"
+    ],
+    "e3_005_naive": [
+      "| {} |"
+    ],
+    "e3_005_ratio": [
+      "| {} |"
+    ],
+    "e3_005_predicted": [
+      "| {} |"
+    ],
+    "e3_010_icc": [
+      "| {} |"
+    ],
+    "e3_010_naive": [
+      "| {} |"
+    ],
+    "e3_010_ratio": [
+      "| {} |"
+    ],
+    "e3_010_predicted": [
+      "| {} |"
+    ],
+    "e3_020_icc": [
+      "| {} |"
+    ],
+    "e3_020_naive": [
+      "| {} |"
+    ],
+    "e3_020_ratio": [
+      "| {} |"
+    ],
+    "e3_020_predicted": [
+      "| {} |"
+    ],
+    "e3_040_icc": [
+      "| {} |"
+    ],
+    "e3_040_naive": [
+      "| {} |"
+    ],
+    "e3_040_ratio": [
+      "| {} |"
+    ],
+    "e3_040_predicted": [
+      "| {} |"
+    ],
+    "e4_1000_naive_power": [
+      "| {} |"
+    ],
+    "e4_1000_delta_power": [
+      "| {} |"
+    ],
+    "e4_2000_naive_power": [
+      "| {} |"
+    ],
+    "e4_2000_delta_power": [
+      "| {} |"
+    ],
+    "e4_4000_naive_power": [
+      "| {} |"
+    ],
+    "e4_4000_delta_power": [
+      "| {} |"
+    ],
+    "e4_8000_naive_power": [
+      "| {} |"
+    ],
+    "e4_8000_delta_power": [
+      "| {} |"
+    ],
+    "e4_16000_naive_power": [
+      "| {} |"
+    ],
+    "e4_16000_delta_power": [
+      "| {} |"
+    ]
+  },
+  "checked_documents": [
+    "README.md",
+    "docs/adr/ADR-005-what-this-cannot-measure.md"
+  ],
+  "note": "every value here is produced by running the suite and the four experiments"
+}

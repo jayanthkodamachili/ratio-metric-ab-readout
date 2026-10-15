@@ -1,0 +1,53 @@
+{
+  "experiment": "e4_what_it_costs",
+  "question": "What does the corrected variance cost in power, and what does it buy?",
+  "replicates": 500,
+  "true_lift": 0.06,
+  "cells": [
+    {
+      "n_users": 1000,
+      "naive_fpr": 0.164,
+      "delta_fpr": 0.044,
+      "naive_power": 0.244,
+      "delta_power": 0.072
+    },
+    {
+      "n_users": 2000,
+      "naive_fpr": 0.176,
+      "delta_fpr": 0.054,
+      "naive_power": 0.336,
+      "delta_power": 0.14
+    },
+    {
+      "n_users": 4000,
+      "naive_fpr": 0.158,
+      "delta_fpr": 0.028,
+      "naive_power": 0.426,
+      "delta_power": 0.208
+    },
+    {
+      "n_users": 8000,
+      "naive_fpr": 0.152,
+      "delta_fpr": 0.042,
+      "naive_power": 0.608,
+      "delta_power": 0.38
+    },
+    {
+      "n_users": 16000,
+      "naive_fpr": 0.17,
+      "delta_fpr": 0.038,
+      "naive_power": 0.858,
+      "delta_power": 0.664
+    }
+  ],
+  "smallest_n": 1000,
+  "smallest_naive_fpr": 0.164,
+  "largest_n": 16000,
+  "naive_power_at_largest": 0.858,
+  "delta_power_at_largest": 0.664,
+  "power_gap_at_largest": 0.19399999999999995,
+  "naive_80_users": 16000,
+  "delta_80_users": null,
+  "delta_reaches_80_in_range": false,
+  "mean_power_gap": 0.2016
+}
