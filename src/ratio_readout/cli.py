@@ -42,7 +42,15 @@ def build_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument("--base-rate", type=float, default=0.10)
     parser.add_argument("--lift", type=float, default=0.0, help="0 runs an A/A test")
-    parser.add_argument("--treatment-share", type=float, default=0.5)
+    parser.add_argument(
+        "--treatment-share", type=float, default=0.5, help="the split the experiment declared"
+    )
+    parser.add_argument(
+        "--delivered-treatment-share",
+        type=float,
+        default=None,
+        help="inject an assignment fault: the split actually delivered, if it differs",
+    )
     parser.add_argument("--alpha", type=float, default=0.05)
     parser.add_argument("--bootstrap-resamples", type=int, default=1000)
     parser.add_argument("--seed", type=int, default=20260215)
@@ -58,6 +66,7 @@ def config_from_args(args: argparse.Namespace) -> ScenarioConfig:
         base_rate=args.base_rate,
         lift=args.lift,
         treatment_share=args.treatment_share,
+        delivered_treatment_share=args.delivered_treatment_share,
         alpha=args.alpha,
         bootstrap_resamples=args.bootstrap_resamples,
         seed=args.seed,
@@ -74,7 +83,8 @@ def render(readout: Readout) -> str:
         "",
         f"control {readout.control_ratio:.5f}   treatment {readout.treatment_ratio:.5f}",
         "",
-        f"{'estimator':<20}{'unit':>8}{'effect':>12}{'std error':>12}{'p value':>11}{'calls it':>10}",
+        f"{'estimator':<20}{'unit':>8}{'effect':>12}"
+        f"{'std error':>12}{'p value':>11}{'calls it':>10}",
         "-" * 73,
     ]
     for estimate in readout.ordered:

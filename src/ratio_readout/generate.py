@@ -78,7 +78,10 @@ def generate(config: ScenarioConfig) -> Experiment:
     """Draw one experiment from the configured distribution."""
     rng = np.random.default_rng(config.seed)
 
-    assignment = (rng.random(config.n_users) < config.treatment_share).astype(np.int64)
+    # Assignment uses the share the mechanism actually delivers, which is the declared
+    # share unless a fault has been injected. The SRM gate downstream only knows what was
+    # declared, which is exactly the position a real analyst is in.
+    assignment = (rng.random(config.n_users) < config.actual_treatment_share).astype(np.int64)
 
     # Events per user: Poisson shifted so the minimum is one. A user with no events
     # contributes nothing to a ratio metric but still consumes a randomisation slot, which
@@ -128,7 +131,14 @@ def observed_icc(experiment: Experiment) -> float:
     mean_cluster = total_events / n_users
     ms_between = between / (n_users - 1)
     ms_within = within / (total_events - n_users) if total_events > n_users else 0.0
-    if ms_between + ms_within == 0:
+    if ms_between + ms_within == 0:  # pragma: no cover
+        # Unreachable given the guard above, and kept anyway as a division guard. For both
+        # mean squares to vanish, the between sum must be zero (every user at the grand
+        # rate) while the within sum is positive, and the within sum can only be positive
+        # when some user has a rate strictly between 0 and 1, which makes the within mean
+        # square positive too. No input was found that reaches this line; it stays because
+        # the alternative to an unreachable return is a division by zero if that reasoning
+        # is ever wrong.
         return 0.0
     estimate = (ms_between - ms_within) / (ms_between + (mean_cluster - 1) * ms_within)
     return float(max(0.0, estimate))

@@ -29,7 +29,12 @@ class ScenarioConfig:
             two random events, which is the only case where the naive test is correct.
         base_rate: control arm event-level success probability.
         lift: relative effect applied to the treatment arm. Zero makes this an A/A test.
-        treatment_share: intended share of users assigned to treatment.
+        treatment_share: the share of users the experiment was *declared* to assign to
+            treatment. This is what the SRM gate checks against.
+        delivered_treatment_share: the share the assignment mechanism actually delivered.
+            None means it matched the declaration, which is the healthy case. Setting it
+            injects the fault an SRM gate exists to catch: a system that was configured
+            for an even split and shipped something else.
         alpha: nominal significance level, the rate the false positive rate is measured
             against.
         bootstrap_resamples: resamples drawn by the cluster bootstrap.
@@ -42,6 +47,7 @@ class ScenarioConfig:
     base_rate: float = 0.10
     lift: float = 0.0
     treatment_share: float = 0.5
+    delivered_treatment_share: float | None = None
     alpha: float = 0.05
     bootstrap_resamples: int = 1000
     seed: int = 20260215
@@ -57,6 +63,10 @@ class ScenarioConfig:
             raise ConfigError("base_rate must sit strictly between 0 and 1")
         if not 0.0 < self.treatment_share < 1.0:
             raise ConfigError("treatment_share must sit strictly between 0 and 1")
+        if self.delivered_treatment_share is not None and not (
+            0.0 < self.delivered_treatment_share < 1.0
+        ):
+            raise ConfigError("delivered_treatment_share must sit strictly between 0 and 1")
         if not 0.0 < self.alpha < 1.0:
             raise ConfigError("alpha must sit strictly between 0 and 1")
         if self.bootstrap_resamples < 50:
@@ -76,6 +86,13 @@ class ScenarioConfig:
                 f"lift {self.lift} drives the treated rate to {treated:.4f}, "
                 "which is not a probability"
             )
+
+    @property
+    def actual_treatment_share(self) -> float:
+        """What the assignment mechanism really does, as opposed to what was declared."""
+        if self.delivered_treatment_share is None:
+            return self.treatment_share
+        return self.delivered_treatment_share
 
     @property
     def design_effect(self) -> float:
